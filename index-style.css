@@ -1,4 +1,56 @@
+body {
+    background-color: lightcoral;
+    font-family: "Parkinsans", 'Courier New', Courier, monospace; ;
+}
+
+.title-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 h1 {
-    font-family: sans-serif;
-    color: red;
+    text-align: center;
+    font-size: 4rem;
+    width: 530px;
+    min-width: 530px;
+    margin-right: 130px;
+}
+
+.arrow-clockwise {
+    width: 7rem;
+    height: auto;
+    min-width: 7rem;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.dice-title {
+    text-align: center;
+}
+
+#die-1 {
+    width: 100px;
+    height: auto;
+}
+
+#die-2 {
+    width: 100px;
+    height: auto
+}
+
+#winner-text {
+    text-align: center;
+    color: greenyellow;
+}
+
+footer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
 }

@@ -2,26 +2,47 @@
 <html lang="en">
     <head>
         <meta charset="UTF=8" />
-        <title>Beginning with the Document Object Model</title>
+        <title>Dice Battle!</title>
         <link rel="stylesheet" href="index-style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>The Document Object Model</h1>
 
-        <input type="checkbox">
+        <section id="title">
+            <div class="title-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="arrow-clockwise" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                  </svg>           
+                <h1>Refresh Browser<br> to Play!</h1>
+            </div>
+        </section>
 
-        <button style="color: red;">Click Me</button>
+        <section id="dice-display">
+            <div class="dice-container">
+                <div>
+                    <p class="dice-title">Player 1</p>
+                    <img id="die-1" src="./Assets/dice-1.svg" alt="player 1 die display" />
+                </div>
+                <div>
+                    <p class="dice-title">Player 2</p>
+                    <img id="die-2" src="./Assets/dice-1-fill.svg" alt="player 2 die display" />
+                </div>
+            </div>
+        </section>
+        <section id="results-container">
+            <div class="results-container">
+                <h2 id="winner-text">No winner at present.</h2>
+            </div>
+        </section>
 
-        <ul>
-            <li class="list">
-                <a href="https://google.com">google</a>
-            </li>
-            <li>
-                second
-            </li>
-            <li>
-                third
-            </li>
-        </ul>
+        <footer id="footer">copywrite Nick Harding 2024</footer>
+
+
+        <script>
+
+        </script>
     </body>
 </html>
