@@ -30,7 +30,7 @@ body {
   .natural-keys {
     display: flex;
     justify-content: space-between;
-    gap: 5px; /* Control spacing between natural keys */
+    gap: 5px;
   }
 
   .synth-key.sharp {
