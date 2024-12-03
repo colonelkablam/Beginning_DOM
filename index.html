@@ -1,88 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <meta charset="UTF=8" />
-        <title>Dice Battle!</title>
-        <link rel="stylesheet" href="index-style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A collection of projects showcasing beginner and more advanced JS and DOM usage." />
+        <meta name="author" content="Nick Harding" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./index-style.css" />
+        <title>JS and DOM Projects Showcase</title>
     </head>
+
     <body>
-
-        <section id="title">
-            <div class="title-container">       
-                <h1>DICE BATTLE<br>
+        <section class="section" id="title-section">
+            <h1>Document Object Model<br>Projects</h1>
+        </section>
+        <section class="section" id="link-section">
+            <div class="grid-container">
+                <a class="item" href="./dice-battle.html">
+                    <img class="item-image" src="./Assets/dice-6.svg" />
+                    <h3 class="item-text">Play Dice Battle!</h3>
+                </a>
+                <a class="item" href="./drum-kit.html">
+                    <img class="item-image" src="./Assets/drum.svg" />
+                    <h3 class="item-text">Play Drum Kit</h3>
+                </a>
+                <a class="item empty" href="#">
+                    <img class="item-image" src="./Assets/file-question.svg" />
+                    <h3 class="item-text">empty</h3>
+                </a>
+                <a class="item empty" href="#">
+                    <img class="item-image" src="./Assets/file-question.svg" />
+                    <h3 class="item-text">empty</h3>
+                </a>
+                <a class="item empty" href="#">
+                    <img class="item-image" src="./Assets/file-question.svg" />
+                    <h3 class="item-text">empty</h3>
+                </a>
+                <a class="item empty" href="#">
+                    <img class="item-image" src="./Assets/file-question.svg" />
+                    <h3 class="item-text">empty</h3>
+                </a>
             </div>
         </section>
-
-        <section id="dice-display">
-            <div class="dice-container">
-                <div>
-                    <p class="dice-title">Player 1</p>
-                    <img id="die-1" src="./Assets/dice-3.svg" alt="player 1 die display" />
-                </div>
-                <div id="battle-button-container">
-                    <p id="battle-button-title">Do Battle!</p>
-                    <button id="battle-button" onclick="rollDice()">
-                        <img id="battle-img" src="./Assets/swords.png" alt="do battle button" />
-                    </button>
-                </div>
-                <div>
-                    <p class="dice-title">Player 2</p>
-                    <img id="die-2" src="./Assets/dice-3-fill.svg" alt="player 2 die display" />
-                </div>
-            </div>
+        <section class="section" id="footer-section">
+            <em>© 2024 Nick Harding</em>
         </section>
-        <section id="results-display">
-            <div class="results-container">
-                <h2 id="winner-text">Let Battle Commence!</h2>
-            </div>
-        </section>
-
-        <footer id="footer"><em>copywrite Nick Harding 2024</em></footer>
-
-
-        <script>
-            let player1Roll = 0;
-            let player2Roll = 0;
-            let startText = "Let Battle Commence!";
-            let drawText = "Players draw!";
-            let player1Win = "Player 1 wins!";
-            let player2Win = "Player 2 wins!";
-            let player1DieImage = document.querySelector("#die-1");
-            let player2DieImage = document.querySelector("#die-2");
-            let winningText = document.querySelector("#winner-text");
-            
-            function rollDice() {
-                player1Roll = getRandomDieValue();
-                player2Roll = getRandomDieValue();
-                console.log(player1Roll, player2Roll);
-                UpdateUI();
-
-            }
-
-            function getRandomDieValue() {
-                return Math.floor(Math.random() * 6) + 1
-            }
-
-            function UpdateUI() {
-                player1DieImage.src = `./Assets/dice-${player1Roll}.svg`;
-                player2DieImage.src = `./Assets/dice-${player2Roll}-fill.svg`;
-
-                if (player1Roll === 0 && player2Roll === 0) {
-                    winningText.innerHTML = startText;
-                }
-                else if (player1Roll === player2Roll) {
-                    winningText.innerHTML = drawText;
-                } else if (player1Roll > player2Roll) {
-                    winningText.innerHTML = player1Win;
-                } else {
-                    winningText.innerHTML = player2Win;
-                }
-
-            }
-
-        </script>
     </body>
 </html>

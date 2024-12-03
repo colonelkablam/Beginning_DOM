@@ -1,107 +1,59 @@
 body {
-    margin: 0px;
-    padding: 0;
-    background-color: lightcoral;
-    font-family: "Parkinsans", 'Courier New', Courier, monospace; ;
-}
-
-.title-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    background-color: rgb(55, 233, 174);
+    font-family: "Ubuntu", serif;
 }
 
 h1 {
+    font-size: 2rem;
     text-align: center;
-    font-size: 4rem;
-    width: 500px;
-    min-width: 500px;
+    min-width: 380px;
 }
 
-.battle-swords {
-    width: 7rem;
-    height: auto;
-    min-width: 7rem;
-}
-
-.dice-container {
+.section {
     display: flex;
     justify-content: center;
+    margin: 2rem 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-auto-rows: 140px;
+    gap: 20px
+}
+
+.item {
+    background-color: rgb(165, 117, 209, 0.7);
+    border: 3px dashed black;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
     align-items: center;
-    gap: 30px;
+    padding: 10px;
+}
+.item:hover {
+    background-color: rgba(165, 117, 209, 1); /* Add a hover effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.dice-title {
-    text-align: center;
+.item.empty{
+    background-color: rgba(0, 0, 0, 0);
 }
 
-#battle-button-title {
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 800;
-    color: rgba(173, 15, 160, 0.7);
+a.item {
+    text-decoration: none;
+    color: black;
 }
 
-#die-1 {
-    width: 100px;
+.item-image {
+    margin: 0;
+    width: 40px;
     height: auto;
 }
 
-#die-2 {
-    width: 100px;
-    height: auto
-}
-
-#battle-button-container {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 90px;
-
-}
-
-#battle-button {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(173, 15, 160, 0.466);
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px; /* Optional rounded corners */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
-    cursor: pointer;
-  }
-
-  #battle-button:hover {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
-  }
-
-  #battle-button:active {
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4); /* Pressed button effect */
-  }
-
-#battle-img {
-    width: 45px;
-    height: auto;
-}
-
-.results-container {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0rem;
-}
-
-#winner-text {
-    text-align: center;
-    color: greenyellow;    
-    min-width: 280px;
-}
-
-footer {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    min-width: 250px;
+.item-text {
+    margin: 0;
 }
