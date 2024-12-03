@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF=8" />
         <title>Dice Battle!</title>
-        <link rel="stylesheet" href="dice-battle-style.css" />
+        <link rel="stylesheet" href="./stylesheets/dice-battle-style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans" rel="stylesheet">
     </head>
     <body>
 
@@ -43,46 +43,6 @@
         <footer id="footer"><em>© 2024 Nick Harding</em></footer>
 
 
-        <script>
-            let player1Roll = 0;
-            let player2Roll = 0;
-            let startText = "Let Battle Commence!";
-            let drawText = "Players draw!";
-            let player1Win = "Player 1 wins!";
-            let player2Win = "Player 2 wins!";
-            let player1DieImage = document.querySelector("#die-1");
-            let player2DieImage = document.querySelector("#die-2");
-            let winningText = document.querySelector("#winner-text");
-            
-            function rollDice() {
-                player1Roll = getRandomDieValue();
-                player2Roll = getRandomDieValue();
-                console.log(player1Roll, player2Roll);
-                UpdateUI();
-
-            }
-
-            function getRandomDieValue() {
-                return Math.floor(Math.random() * 6) + 1
-            }
-
-            function UpdateUI() {
-                player1DieImage.src = `./Assets/dice-${player1Roll}.svg`;
-                player2DieImage.src = `./Assets/dice-${player2Roll}-fill.svg`;
-
-                if (player1Roll === 0 && player2Roll === 0) {
-                    winningText.innerHTML = startText;
-                }
-                else if (player1Roll === player2Roll) {
-                    winningText.innerHTML = drawText;
-                } else if (player1Roll > player2Roll) {
-                    winningText.innerHTML = player1Win;
-                } else {
-                    winningText.innerHTML = player2Win;
-                }
-
-            }
-
-        </script>
+        <script src="./code/dice-battle-code.js"></script>
     </body>
 </html>
