@@ -1,4 +1,6 @@
 body {
+    margin: 0px;
+    padding: 0;
     background-color: lightcoral;
     font-family: "Parkinsans", 'Courier New', Courier, monospace; ;
 }
@@ -13,12 +15,11 @@ body {
 h1 {
     text-align: center;
     font-size: 4rem;
-    width: 530px;
-    min-width: 530px;
-    margin-right: 130px;
+    width: 500px;
+    min-width: 500px;
 }
 
-.arrow-clockwise {
+.battle-swords {
     width: 7rem;
     height: auto;
     min-width: 7rem;
@@ -27,11 +28,19 @@ h1 {
 .dice-container {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
+    gap: 30px;
 }
 
 .dice-title {
     text-align: center;
+}
+
+#battle-button-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: rgba(173, 15, 160, 0.7);
 }
 
 #die-1 {
@@ -44,13 +53,55 @@ h1 {
     height: auto
 }
 
+#battle-button-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 90px;
+
+}
+
+#battle-button {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(173, 15, 160, 0.466);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+    cursor: pointer;
+  }
+
+  #battle-button:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Slightly larger shadow on hover */
+  }
+
+  #battle-button:active {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4); /* Pressed button effect */
+  }
+
+#battle-img {
+    width: 45px;
+    height: auto;
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+
 #winner-text {
     text-align: center;
-    color: greenyellow;
+    color: greenyellow;    
+    min-width: 280px;
 }
 
 footer {
     margin-top: 3rem;
     display: flex;
     justify-content: center;
+    min-width: 250px;
 }
