@@ -38,12 +38,11 @@ body {
     text-shadow: 3px 0 #DA0463;
     font-size: 1.5rem;
     background-color: rgb(95, 17, 17);
-    width: 65px;
-    height: 100px;
+    width: 55px;
+    height: 120px;
     position: relative;
     z-index: 1;
-    top: 50px;
-
+    top: 100px;
   }
 
   .synth-key {
@@ -70,10 +69,10 @@ body {
   }
   
   .c {
-
   }
 
   .cs {
+    left: 13px;
 
   }
 
@@ -82,6 +81,7 @@ body {
   }
 
   .ds {
+    right: 35px;
 
   }
 
@@ -102,7 +102,7 @@ body {
   }
 
   .gs {
-
+    right: 47px;
   }
 
   .a {
@@ -110,6 +110,7 @@ body {
   }
 
   .as {
+    right: 95px;
 
   }
 
