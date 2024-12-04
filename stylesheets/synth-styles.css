@@ -3,17 +3,58 @@ body {
     background-color: #283149;
   }
   
-  h1 {
+  .title-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #title {
+    min-width: 620px;
+    margin: 1rem 0;
     font-size: 5rem;
     color: #DBEDF3;
     font-family: "Arvo", cursive;
     text-shadow: 3px 0 #DA0463;
-  
   }
+
+  .octave-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #octave-text {
+    min-width: 200px;
+    margin: 0;
+    font-size: 2rem;
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 2px 0 #DA0463;
+  }
+
+  .octave-button {
+    background-color: rgba(255, 255, 255, 0.274);
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1;
+
+  }
+
+  .octave-button:disabled {
+    opacity: 0.2;
+  }
+
+  .arrow-svg {
+    width: 35px;
+  }
+
 
   .key-container {
     display: flex;
     justify-content: center;
+    margin-top: -50px;
   }
 
   .keys {
@@ -25,7 +66,7 @@ body {
   .sharp-keys {
     display: flex;
     justify-content: space-around;
-  }
+   }
 
   .natural-keys {
     display: flex;
@@ -43,16 +84,17 @@ body {
     position: relative;
     z-index: 1;
     top: 100px;
+
   }
 
-  .synth-key {
+.synth-key {
     outline: none;
     border: 5px solid #404B69;
     font-size: 2rem;
     font-family: 'Arvo', cursive;
     line-height: 1;
     font-weight: 900;
-    color: #DA0463;
+    color: rgb(220, 4, 101);
     text-shadow: 3px 0 #add1dd;
     border-radius: 10px;
     display: inline-block;
@@ -61,64 +103,78 @@ body {
     width: 65px;
     height: 200px;
 
-      /* Flexbox for text alignment */
+    /* Flexbox for text alignment */
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 10px; 
-  }
+    padding-bottom: 10px;
+
+    /* Add transition for smooth shrinking */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.synth-key:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px rgba(233, 37, 125, 0.6);
+}
+
+.synth-key.active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 4px 6px rgba(233, 37, 125, 0.6);
+}
   
-  .c {
+  #c {
   }
 
-  .cs {
-    left: 13px;
-
-  }
-
-  .d {
+  #cs {
+    left: 10px;
 
   }
 
-  .ds {
-    right: 35px;
+  #d {
 
   }
 
-  .e {
+  #ds {
+    right: 30px;
 
   }
 
-  .f {
+  #e {
 
   }
 
-  .fs {
+  #f {
 
   }
 
-  .g {
+  #fs {
+    right: 2px;
 
   }
 
-  .gs {
-    right: 47px;
-  }
-
-  .a {
+  #g {
 
   }
 
-  .as {
-    right: 95px;
+  #gs {
+    right: 42px;
+  }
+
+  #a {
 
   }
 
-  .b {
+  #as {
+    right: 83px;
 
   }
 
-  .c2 {
+  #b {
+
+  }
+
+  #c2 {
 
   }
   

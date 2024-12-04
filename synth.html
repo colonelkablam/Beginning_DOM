@@ -8,28 +8,36 @@
     </head>
 
     <body>
-        <h1 id="title">Synth 🎹 kit</h1>
+        <div class="title-container">
+            <h1 id="title">🎛️ Synth kit 🎹</h1>
+        </div>
+
+        <div class="octave-info-container">
+            <button class="octave-button" id="down-octave"><img class="arrow-svg" src="./assets/images/arrow-big-left-dash.svg" /></button>
+            <h3 id="octave-text">octave: 2</h3>
+            <button class="octave-button" id="up-octave"><img class="arrow-svg" src="./assets/images/arrow-big-right-dash.svg" /></button>
+        </div>
 
         <div class="key-container">
             <div class="keys">
                 <div class="sharp-keys">
-                    <div class="synth-key sharp cs">C#</div>
-                    <div class="synth-key sharp ds">D#</div>
-                    <div class="synth-key sharp fs">F#</div>
-                    <div class="synth-key sharp gs">G#</div>
-                    <div class="synth-key sharp as">A#</div>
+                    <button class="synth-key sharp" id="cs">C#</button>
+                    <button class="synth-key sharp" id="ds">D#</button>
+                    <button class="synth-key sharp" id="fs">F#</button>
+                    <button class="synth-key sharp" id="gs">G#</button>
+                    <button class="synth-key sharp" id="as">A#</button>
                   </div>
               
                   <!-- Natural keys -->
                   <div class="natural-keys">
-                    <div class="synth-key c">C</div>
-                    <div class="synth-key d">D</div>
-                    <div class="synth-key e">E</div>
-                    <div class="synth-key f">F</div>
-                    <div class="synth-key g">G</div>
-                    <div class="synth-key a">A</div>
-                    <div class="synth-key b">B</div>
-                    <div class="synth-key c2">C</div>
+                    <button class="synth-key" id="c">C</button>
+                    <button class="synth-key" id="d">D</button>
+                    <button class="synth-key" id="e">E</button>
+                    <button class="synth-key" id="f">F</button>
+                    <button class="synth-key" id="g">G</button>
+                    <button class="synth-key" id="a">A</button>
+                    <button class="synth-key" id="b">B</button>
+                    <button class="synth-key" id="c2">C</button>
                   </div>
             </div>
         </div>
