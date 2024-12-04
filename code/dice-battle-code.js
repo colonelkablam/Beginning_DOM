@@ -21,8 +21,8 @@ function getRandomDieValue() {
 }
 
 function UpdateUI() {
-    player1DieImage.src = `./Assets/dice-${player1Roll}.svg`;
-    player2DieImage.src = `./Assets/dice-${player2Roll}-fill.svg`;
+    player1DieImage.src = `./assets/images/dice-${player1Roll}.svg`;
+    player2DieImage.src = `./assets/images/dice-${player2Roll}-fill.svg`;
 
     if (player1Roll === 0 && player2Roll === 0) {
         winningText.innerHTML = startText;

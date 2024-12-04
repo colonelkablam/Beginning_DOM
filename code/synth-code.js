@@ -94,7 +94,7 @@ document.addEventListener('keydown', function (event) {
             setTimeout(() => button.classList.remove('active'), 200);
         }
         sounds[note][octave].currentTime = 0;
-        sounds[note][octave].play(); 
+        sounds[note][octave].play();
     } else if (!keysPressed[event.key]) {
         noNote.play();
     }
